@@ -21,7 +21,7 @@ namespace Business.Concrete
         {
             if (brand.BrandName.Length < 2)
             {
-                return new ErrorResult(Messages.Descriptionİnvalid);
+                return new ErrorResult(Messages.Nameİnvalid);
             }
             _brandDal.Add(brand);
 
@@ -29,29 +29,26 @@ namespace Business.Concrete
 
         }
 
+        public IResult Delete(Brand brand)
+        {
+            _brandDal.Delete(brand);
+            return new SuccessResult(Messages.BrandDeleted);
+        }
+        public IResult Update(Brand brand)
+        {
+            _brandDal.Update(brand);
+            return new SuccessResult(Messages.BrandUpdated);
+        }
         public IDataResult<List<Brand>> GetAll()
         {
-            throw new NotImplementedException();
+            return new SuccessDataResult<List<Brand>>(_brandDal.GetAll());
         }
 
-        public IDataResult<Brand> GetById(int id)
+        public IDataResult<Brand> GetById(int brandid)
         {
-            throw new NotImplementedException();
+            return new SuccessDataResult<Brand>(_brandDal.Get(p => p.BrandId == brandid));
         }
 
-        public IDataResult<List<Brand>> GetByUnitPrice(decimal min, decimal max)
-        {
-            throw new NotImplementedException();
-        }
 
-        public IDataResult<List<Brand>> GetCarsByBrandId(int brandid)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IDataResult<List<Brand>> GetCarsByColorId(int colorid)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
