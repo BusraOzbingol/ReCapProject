@@ -8,5 +8,6 @@ namespace DataAccess.Abstract
 {
     public interface IBrandDal : IEntityRepository<Brand>
     {
+        //List<BrandGetListWithCarsDto> GetListWithCars();
     }
 }
