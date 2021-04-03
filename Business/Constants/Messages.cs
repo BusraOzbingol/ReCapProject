@@ -13,6 +13,8 @@ namespace Business.Constants
         public static string CarUpdated = "Araba güncellendi.";
         public static string CarListed = "Arabalar listelendi";
         public static string CarFailedAddOrUpdate = "Lütfen günlük fiyat kısmını 0'dan büyük giriniz.";
+        public static string CarCountOfBrandError = "Bir markadan en fazla 10 ürün girilir.";
+        public static string CarNameAlreadExists = "Bu isimde başka araba var";
 
         public static string BrandAdded = "Marka eklendi.";
         public static string BrandDeleted = "Marka silindi.";
@@ -26,6 +28,8 @@ namespace Business.Constants
         public static string CustomerAdded = "Müşteri başarıyla eklendi.";
         public static string CustomerDeleted = "Müşteri başarıyla silindi.";
         public static string CustomerUpdated = "Müşteri başarıyla güncellendi.";
+        public static string CustomerFailedAddOrUpdate = "Lütfen geçerli kampanya giriniz.";
+
 
         public static string UserAdded = "Kullanıcı başarıyla eklendi.";
         public static string UserDeleted = "Kullanıcı başarıyla silindi.";
